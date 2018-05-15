@@ -8,12 +8,17 @@ import { RequiredValidation }       from '../../validation/required-validation';
 	templateUrl : './required-input.component.html',
 	styleUrls   : ['./required-input.component.scss']
 })
-export class RequiredInputComponent {
+export class RequiredInputComponent implements OnInit {
 	@Input() public form: FormGroup;
 	@Input() public formControlTitle: string;
 	@Input() public placeholder: string = 'This field';
 
 	constructor() { }
+
+	ngOnInit(): void {
+		this.createValidators();
+	}
+
 	private createValidators(): void {
 		this.form.get(this.formControlTitle).setValidators([RequiredValidation.required(this.placeholder)]);
 		this.form.get(this.formControlTitle).updateValueAndValidity();
