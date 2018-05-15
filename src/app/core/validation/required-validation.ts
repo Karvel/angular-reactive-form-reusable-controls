@@ -1,4 +1,4 @@
-import { ValidatorFn, AbstractControl, ValidationErrors } from '@angular/forms';
+import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 
 export class RequiredValidation {
 	static required(placeholder: string = 'This field'): ValidatorFn {
