@@ -1,10 +1,13 @@
 <form [formGroup]="form">
-	<input
-		type="text"
-		[formControlName]="formControlTitle"
-		[placeholder]="placeholder"
-	>
-	<span *ngIf="form.get(formControlTitle).errors?.isRequired">
-		{{ form.get(formControlTitle).errors.isRequired }}
-	</span>
+	<mat-form-field>
+		<input
+			type="text"
+			matInput
+			[formControlName]="formControlTitle"
+			[placeholder]="placeholder"
+		>
+		<mat-error *ngIf="form.get(formControlTitle).errors">
+			{{ form.get(formControlTitle).errors.isRequired }}
+		</mat-error>
+	</mat-form-field>
 </form>
