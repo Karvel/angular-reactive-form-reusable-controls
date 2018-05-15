@@ -1,1 +1,7 @@
-Home
+<form [formGroup]="tutorialForm">
+	<app-required-input
+		[form]="tutorialForm"
+		[formControlTitle]="'name'"
+		[placeholder]="'Name'"
+	></app-required-input>
+</form>
