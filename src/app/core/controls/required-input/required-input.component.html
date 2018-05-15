@@ -4,4 +4,7 @@
 		[formControlName]="formControlTitle"
 		[placeholder]="placeholder"
 	>
+	<span *ngIf="form.get(formControlTitle).errors?.isRequired">
+		{{ form.get(formControlTitle).errors.isRequired }}
+	</span>
 </form>
