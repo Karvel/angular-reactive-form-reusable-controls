@@ -10,6 +10,7 @@ import {
   }                                from './app-routing.module';
 import { ControlsModule }          from './core/controls/controls.module';
 import { CoreModule }              from './core/core.module';
+import { MaterialModule }          from './core/imports/material.module';
 
 @NgModule({
 	declarations: [
@@ -20,6 +21,7 @@ import { CoreModule }              from './core/core.module';
 		BrowserModule,
 		ControlsModule,
 		CoreModule,
+		MaterialModule,
 		ReactiveFormsModule,
 		BrowserAnimationsModule,
 		AppRoutingModule,
