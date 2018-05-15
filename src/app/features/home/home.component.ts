@@ -18,4 +18,8 @@ export class HomeComponent implements OnInit {
 	}
 
 	ngOnInit(): void { }
+
+	public submitForm(): void {
+		console.log('submitForm', this.tutorialForm);
+	}
 }
