@@ -4,6 +4,17 @@
 		[formControlTitle]="'name'"
 		[placeholder]="'Name'"
 	></app-required-input>
+	<mat-form-field>
+		<input
+			type="password"
+			matInput
+			[formControlName]="'password'"
+			[placeholder]="'Password'"
+		>
+		<mat-error *ngIf="tutorialForm.get('password').errors">
+			{{ tutorialForm.get('password').errors.isRequired }}
+		</mat-error>
+	</mat-form-field>
 	<button
 		type="submit"
 		mat-raised-button
