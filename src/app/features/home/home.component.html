@@ -1,26 +1,29 @@
 <form [formGroup]="tutorialForm">
-	<app-required-input
-		[form]="tutorialForm"
-		[formControlTitle]="'name'"
-		[placeholder]="'Name'"
-	></app-required-input>
-	<app-required-input
-		[form]="tutorialForm"
-		[formControlTitle]="'id'"
-		[placeholder]="'ID'"
-	></app-required-input>
-	<mat-form-field>
-		<input
-			type="password"
-			matInput
-			[formControlName]="'password'"
-			[placeholder]="'Password'"
-		>
-		<mat-error *ngIf="tutorialForm.get('password').errors">
-			{{ tutorialForm.get('password').errors.isRequired }}
-		</mat-error>
-	</mat-form-field>
+	<div>
+		<app-required-input
+			[form]="tutorialForm"
+			[formControlTitle]="'id'"
+			[placeholder]="'ID'"
+		></app-required-input>
+		<app-required-input
+			[form]="tutorialForm"
+			[formControlTitle]="'name'"
+			[placeholder]="'Name'"
+		></app-required-input>
+		<mat-form-field>
+			<input
+				type="password"
+				matInput
+				[formControlName]="'password'"
+				[placeholder]="'Password'"
+			>
+			<mat-error *ngIf="tutorialForm.get('password').errors">
+				{{ tutorialForm.get('password').errors.isRequired }}
+			</mat-error>
+		</mat-form-field>
+	</div>
 	<button
+		class="submit-button"
 		type="submit"
 		mat-raised-button
 		(click)="submitForm()"
