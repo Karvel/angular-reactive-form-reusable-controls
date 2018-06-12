@@ -29,3 +29,14 @@
 		Submit
 	</button>
 </form>
+
+<mat-card class="user-card " *ngIf="user">
+	<div class="row">
+		<div class="card-label">Name:</div>
+		<div>{{ user.name }}</div>
+	</div>
+	<div class="row">
+		<div class="card-label">Password:</div>
+		<div>{{ user.password }}</div>
+	</div>
+</mat-card>

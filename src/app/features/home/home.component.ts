@@ -1,15 +1,17 @@
-import { Component, OnInit }      from '@angular/core';
+import { Component }              from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 import { RequiredValidation }     from '../../core/validation/required-validation';
+import { User }                   from '../../core/models/user';
 
 @Component({
 	selector    : 'app-home',
 	templateUrl : './home.component.html',
 	styleUrls   : ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 	public tutorialForm: FormGroup;
+	public user: User;
 
 	constructor(
 		private formBuilder: FormBuilder,
@@ -21,9 +23,8 @@ export class HomeComponent implements OnInit {
 		});
 	}
 
-	ngOnInit(): void { }
-
 	public submitForm(): void {
 		console.log('submitForm', this.tutorialForm);
+		this.user = this.tutorialForm.value;
 	}
 }
