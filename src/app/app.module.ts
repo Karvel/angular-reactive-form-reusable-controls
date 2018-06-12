@@ -7,7 +7,7 @@ import { AppComponent }            from './app.component';
 import {
 	AppRoutingModule,
 	routedComponents as mainAppRoutedComponents,
-  }                                from './app-routing.module';
+}                                  from './app-routing.module';
 import { ControlsModule }          from './core/controls/controls.module';
 import { CoreModule }              from './core/core.module';
 import { MaterialModule }          from './core/imports/material.module';
@@ -27,6 +27,6 @@ import { MaterialModule }          from './core/imports/material.module';
 		AppRoutingModule,
 	],
 	providers: [],
-	bootstrap: [AppComponent]
+	bootstrap: [AppComponent],
 })
 export class AppModule { }

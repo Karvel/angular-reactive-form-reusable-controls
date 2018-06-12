@@ -20,7 +20,7 @@
       true,
       "rxjs/Rx"
     ],
-    "import-spacing": true,
+    "import-spacing": false,
     "indent": [
       true,
       "tabs"
@@ -60,7 +60,7 @@
     "no-empty-interface": true,
     "no-eval": true,
     "no-inferrable-types": [
-      true,
+      false,
       "ignore-params"
     ],
     "no-misused-new": true,
@@ -91,7 +91,14 @@
     "semicolon": [
       true,
       "always"
-    ],
+	],
+	"trailing-comma": [
+		true,
+		{
+			"multiline": "always",
+			"singleline": "never"
+		}
+	],
     "triple-equals": [
       true,
       "allow-null-check"

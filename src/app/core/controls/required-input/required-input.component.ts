@@ -6,7 +6,7 @@ import { RequiredValidation }       from '../../validation/required-validation';
 @Component({
 	selector    : 'app-required-input',
 	templateUrl : './required-input.component.html',
-	styleUrls   : ['./required-input.component.scss']
+	styleUrls   : ['./required-input.component.scss'],
 })
 export class RequiredInputComponent implements OnInit {
 	@Input() public form: FormGroup;

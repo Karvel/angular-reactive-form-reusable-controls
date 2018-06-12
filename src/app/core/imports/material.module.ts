@@ -13,6 +13,6 @@ import {
 	exports: [
 		MatButtonModule,
 		MatInputModule,
-	]
+	],
 })
 export class MaterialModule { }
