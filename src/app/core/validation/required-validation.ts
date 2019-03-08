@@ -6,7 +6,9 @@ export class RequiredValidation {
  */
 	static required(placeholder: string = 'This field'): ValidatorFn {
 		return (control: AbstractControl): ValidationErrors | null => {
-			return (!control.value) ? { 'isRequired' : `${placeholder} is required.` } : null;
+			const condition: boolean = !control.value && control.value !== 0;
+
+			return condition ? { 'isRequired' : `${placeholder} is required.` } : null;
 		};
 	}
 }
